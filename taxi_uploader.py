@@ -57,6 +57,10 @@ def save_to_s3(*, source_url, s3_key, s3_bucket):
 def generate_months(start_month_str: str, end_month_str: str):
     start_month = parser.parse(f'{start_month_str}-01')
     end_month = parser.parse(f'{end_month_str}-01')
+
+    if start_month >= end_month:
+        raise Exception('Insert a start month bigger than the end month')
+
     diff = relativedelta.relativedelta(start_month, end_month)
 
     month_diff = abs(diff.months) + 1

@@ -16,5 +16,5 @@ Upload sample data sets to S3
 
 ### Taxi Data
 <pre>
-python taxi_uploader.py --start-month 2018-01 --end-month 2015-04 --destination-bucket my-example-bucket
+python taxi_uploader.py --start-month 2018-01 --end-month 2018-04 --destination-bucket my-example-bucket
 </pre>
