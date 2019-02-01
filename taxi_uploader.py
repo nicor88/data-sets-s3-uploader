@@ -86,16 +86,16 @@ def get_data_set(data_set_types, start_month, end_month, destination_bucket_name
 
 
 def create_argparser():
-    parser = argparse.ArgumentParser(
+    arg_parser = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
 
-    parser.add_argument('--start-month', required=True, help='Start month')
-    parser.add_argument('--end-month', required=True, help='End month, included')
-    parser.add_argument('--destination-bucket', required=True, help='AWS S3 destination bucket name')
+    arg_parser.add_argument('--start-month', required=True, help='Start month')
+    arg_parser.add_argument('--end-month', required=True, help='End month, included')
+    arg_parser.add_argument('--destination-bucket', required=True, help='AWS S3 destination bucket name')
 
-    return parser
+    return arg_parser
 
 
 if __name__ == '__main__':
